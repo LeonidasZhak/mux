@@ -53,6 +53,12 @@ const TAB_CONFIG_DEF = {
     defaultOrder: 35,
     paletteKeywords: ["goal", "target", "objective"],
   },
+  history: {
+    name: "History",
+    contentClassName: "overflow-y-auto p-0",
+    defaultOrder: 37,
+    paletteKeywords: ["prompt", "message", "history", "reuse"],
+  },
   desktop: {
     name: "Desktop",
     contentClassName: "overflow-hidden p-0",

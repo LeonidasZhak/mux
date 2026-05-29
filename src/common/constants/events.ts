@@ -23,6 +23,12 @@ export const CUSTOM_EVENTS = {
   UPDATE_CHAT_INPUT: "mux:updateChatInput",
 
   /**
+   * Event to scroll the active transcript to a persisted message.
+   * Detail: { workspaceId: string, historyId: string }
+   */
+  NAVIGATE_TO_TRANSCRIPT_MESSAGE: "mux:navigateToTranscriptMessage",
+
+  /**
    * Event to clear the active chat composer after an out-of-band command succeeds.
    * Detail: { workspaceId: string }
    */
@@ -150,6 +156,10 @@ export interface CustomEventPayloads {
     mode?: "replace" | "append";
     fileParts?: FilePart[];
     reviews?: ReviewNoteDataForDisplay[];
+  };
+  [CUSTOM_EVENTS.NAVIGATE_TO_TRANSCRIPT_MESSAGE]: {
+    workspaceId: string;
+    historyId: string;
   };
   [CUSTOM_EVENTS.CLEAR_CHAT_COMPOSER]: {
     workspaceId: string;
